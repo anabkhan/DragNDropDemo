@@ -1,0 +1,17 @@
+.item {
+    height: 100px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: --random-background;
+}
+
+.item-scroll-demo {
+    border-bottom: 1px solid;
+    height: 80px;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
