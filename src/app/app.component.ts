@@ -33,7 +33,7 @@ export class AppComponent {
       transferArrayItem(event.previousContainer.data, event.container.data,event.previousIndex,event.currentIndex);
     } else {
       // move item within array from previous index to current
-      moveItemInArray(this.numbers, event.previousIndex, event.currentIndex);
+      moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     }
   }
 
