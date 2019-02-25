@@ -12,6 +12,8 @@ export class AppComponent {
   numbers: any[] = [];
   otherNumbers: any[] = [];
 
+  demoType:any = 'free-drag';
+
   scrollListNumbers:any[];
 
   constructor() {
@@ -35,6 +37,10 @@ export class AppComponent {
       // move item within array from previous index to current
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     }
+  }
+
+  onOptionSelect(event) {
+    console.log(event);
   }
 
 }

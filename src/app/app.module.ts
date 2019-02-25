@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
   imports: [
     BrowserModule,
     DragDropModule,
-    ScrollingModule
+    ScrollingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,7 +3,19 @@
     <div style="width: 100%;">
       <h2>Drag and Drop Demo : </h2>
       <h3>Drag color rectangles and drop to another container</h3>
-      <div style="display: flex;height: 100%;">
+      <div style="margin-bottom: 10px">
+        <select [(ngModel)]="demoType" (ngModelChange)="onOptionSelect($event)">
+          <option  value="free-drag">Free drag</option>
+          <option  value="drag-drop">Drag & Drop</option>
+        </select>
+      </div>
+      <div *ngIf="demoType === 'free-drag'" style="width:25%;border:1px solid black;padding: 5px;">
+        <div [ngStyle]="{
+                  'background': '#'+number.color
+                }" cdkDrag *ngFor="let number of numbers" class="item">
+        </div>
+      </div>
+      <div *ngIf="demoType === 'drag-drop'" style="display: flex;height: 100%;">
         <div cdkDropList [cdkDropListData]="numbers" [cdkDropListConnectedTo]="right" #left="cdkDropList"
           (cdkDropListDropped)="onItemDropped($event)" style="width:25%;border:1px solid black;padding: 5px;">
           <div [ngStyle]="{
